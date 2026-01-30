@@ -1,0 +1,129 @@
+body{
+    background-color: #D6D6D6;
+    width: 100%;
+}
+header{
+    padding: 10px;
+    background-color: #A17500;
+    height: 55px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+}
+h2{
+    text-align: center;
+}
+.form{
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 17px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+}
+.tabla{
+    border-collapse: collapse;
+    border: 5px solid black;
+    margin-left: 38%;
+    margin-top: 5%;
+}
+td{
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 18px;
+    
+}
+.t{
+    background-color: #A17500;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn{
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+    background-color: gray;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-right: 5px;
+}
+select{
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.btn:hover{
+    color: yellow;
+}
+input[type="file"]{
+    display: none;
+}
+input[type="text"]{
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-weight: bold;
+}
+img{
+    width: 250px;
+    height: 320px;
+    object-fit: cover;
+}
+.imagen{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.titulo{
+    float: left;
+}
+.nav{
+    margin-top: 5px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul, ol{
+    list-style: none ;
+}
+.nav li{
+    background-color: #AA9C74;
+    color: black;
+    padding: 3px;
+    text-decoration: none;
+    display: block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+.nav li a{
+    background-color: #AA9C74;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.nav > li{
+    float: left;
+}
+
+.nav li a:hover {
+    color: #CFCFCE;
+}
+.nav li ul{
+    display: none;
+    position: absolute;
+}
+.nav li:hover > ul{
+    display: block;
+}
