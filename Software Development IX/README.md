@@ -31,12 +31,12 @@ Additionally, Stripe was integrated to handle online payments, allowing secure t
 ## Required Modules
 The following modules are required to run the project using pnpm:
 
-pnpm add fastify
-pnpm add @fastify/cors
-pnpm add mongoose
-pnpm add stripe
-pnpm add dotenv
-pnpm add @fastify/static
+- pnpm add fastify
+- pnpm add @fastify/cors
+- pnpm add mongoose
+- pnpm add stripe
+- pnpm add dotenv
+- pnpm add @fastify/static
 
 
 ## Notes
