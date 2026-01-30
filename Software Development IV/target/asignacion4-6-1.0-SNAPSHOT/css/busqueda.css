@@ -1,0 +1,38 @@
+.search-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e4d4c8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-options {
+    margin: 10px 0;
+}
+
+.book-result {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.book-result img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.book-result h3 {
+    font-size: 18px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+.disponible {
+    padding: 5px 20px;
+    background-color: #f3ebde;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+}

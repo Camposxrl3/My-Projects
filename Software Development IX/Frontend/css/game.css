@@ -1,0 +1,284 @@
+.game-container {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b1a13;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .table-area {
+    background-color: #1a0f0a;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  #domino-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    min-height: 100px;
+  }
+  
+  .player-hand {
+    background-color: #2b1a13;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  #player-tiles {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .tile {
+    background-color: #f4c400;
+    color: #000;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    box-shadow: 0 0 5px #000;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .btn.bet {
+    background-color: #f4c400;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .btn.play {
+    background-color: #00a000;
+    color: white;
+  }
+  
+  .btn.pass {
+    background-color: #a00;
+    color: white;
+  }
+  
+  .bot-area {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  #chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  gap: 0;
+  margin: 20px auto;
+  border: 2px solid #333;
+  width: fit-content;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.square.white {
+  background-color: #f0d9b5;
+}
+
+.square.black {
+  background-color: #b58863;
+}
+
+
+.white-piece {
+  color: #f0f0f0;
+  text-shadow: 0 0 2px #000;
+}
+
+.black-piece {
+  color: #222;
+}
+.selected-square {
+  outline: 3px solid #00f;
+  box-shadow: inset 0 0 10px rgba(0, 0, 255, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+.highlight-move {
+  background-color: #aaf !important;
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.board-header h2 {
+  margin: 0;
+}
+
+.board-header p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  background-color: #2b1a13;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #1a0f0a;
+    border-radius: 6px;
+    background-color: #1a0f0a;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.auth-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f4c400;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+  }
+
+  .auth-btn:hover {
+    background-color: #e6b000;
+    transform: translateY(-2px);
+  }
+  .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #f4c400;
+    font-weight: bold;
+  }
+
+  .form-group input {
+    width: 90%;
+    padding: 0.75rem;
+    border: 2px solid #1a0f0a;
+    border-radius: 6px;
+    background-color: #1a0f0a;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: #f4c400;
+  }
+
+  .form-group input::placeholder {
+    color: #888;
+  }
+  h3{
+    color: white;
+  }
+  #rival{
+    color: black;
+  }
+  .error-message {
+    background-color: #a00;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    display: none;
+  }
+
+  .success-message {
+    background-color: #00a000;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    display: none;
+  }
+  .captured-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.captured-section {
+  flex: 1;
+  background: #b58863;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.captured-section h4 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.captured-pieces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+.captured-icon {
+  font-size: 1.8rem;
+  margin: 3px;
+  display: inline-block;
+}

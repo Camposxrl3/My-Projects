@@ -9,6 +9,7 @@ applying core software development concepts such as structured code, database co
 - Develop backend functionality using PHP
 - Handle user input
 - Apply fundamental software development practices
+- Establish and manage MySQL database connections
 
 ## Technologies Used
 - PHP

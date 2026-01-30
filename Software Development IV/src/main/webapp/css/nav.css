@@ -1,0 +1,65 @@
+#nav{
+    margin:auto;
+    justify-content: space-evenly;
+    position: relative;
+}
+.here{
+    background-color: #A47551;
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    width: 290px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 30px;
+
+}
+.submenu{
+    background-color: #523A28;
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    width: 290px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 30px;
+}
+ul, ol{
+    list-style: none;
+}
+.navbuttom{
+    background-color: #523A28;
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    width: 290px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 30px;
+}
+
+.nav li a:hover{
+     background-color: #A47551;
+ }
+
+.nav li ul li a{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ord{
+    display: flex;
+    justify-content: center;
+}
+.nav > li{
+    float: left;
+}
+.nav li ul{
+    display: none;
+    position: absolute;
+}
+
+.nav li:hover > ul{
+    display: block;
+}

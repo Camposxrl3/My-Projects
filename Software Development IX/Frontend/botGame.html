@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>♟️ Hashing Chess - Game ♛</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/game.css" />
+  <script src="./js/botGame.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">♛ Hashing Chess ♜</div>
+    <nav>
+      <a href="./index.html">🏠 Menú</a>
+      <a href="./rules.html">📖 Reglas</a>
+      <button class="btn logout" >🚪 Cerrar Sesión</button>
+    </nav>
+  </header>
+
+  <main class="game-container">
+
+    <section class="table-area">
+      <h2>♟️ Tablero de Ajedrez</h2>
+      <p id="game-status">Esperando tu jugada...</p>
+      <div id="chess-board">
+
+        <!-- Aquí se mostrará el tablero o piezas jugadas -->
+      </div>
+      <button class="btn pass" id="passBtn">Rendirse</button>
+      <button class="btn restart" id="restartBtn" style="display: none;">Jugar otra vez</button>
+    </section>
+
+    <section class="player-hand">
+  <h3>♙ Fichas Capturadas</h3>
+  <div class="captured-container">
+    <div class="captured-section">
+      <h4 id="host"></h4>
+      <div id="capturedByPlayer1" class="captured-pieces"></div>
+    </div>
+    <div class="captured-section">
+      <h4 id="rival">Bot</h4>
+      <div id="capturedByPlayer2" class="captured-pieces"></div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <script src="./js/botChess.js"></script>
+  
+</body>
+</html>

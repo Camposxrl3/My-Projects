@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/login.js" defer></script>
+  <title>♟️ Hashing Chest ♟️ - Inicio de sesión</title>
+</head>
+<body>
+  <header>
+    <div class="logo">♛ Hashing Chess ♜</div>
+    <nav>
+      <a href="./index.html">🏠 Home</a>
+      <a href="./rules.html">📜 Reglas</a>
+    </nav>
+  </header>
+
+  <main class="auth-container">
+    <div class="auth-box">
+      <h1>♟️ Bienvenido a Hashing Chess ♟️</h1>
+      
+      <div class="auth-toggle">
+        <button class="toggle-btn active" id="loginToggle">Iniciar Sesión</button>
+        <button class="toggle-btn" id="signupToggle">Registrarse</button>
+      </div>
+
+      <div class="error-message" id="errorMessage"></div>
+      <div class="success-message" id="successMessage"></div>
+
+      <!-- Login Form -->
+      <div class="form-container active" id="loginForm">
+        <form id="loginFormElement">
+          <div class="form-group">
+            <label for="loginEmail">Correo</label>
+            <input type="email" id="loginEmail" name="email" placeholder="tu@correo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Contraseña</label>
+            <input type="password" id="loginPassword" name="password" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="auth-btn" id="loginBtn">Iniciar Sesión</button>
+        </form>
+        <a href="#" class="forgot-password" onclick="showForgotPassword()">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <!-- Signup Form -->
+      <div class="form-container" id="signupForm">
+        <form id="signupFormElement">
+          <div class="form-group">
+            <label for="signupName">Nombre Completo</label>
+            <input type="text" id="signupName" name="name" placeholder="Tu nombre completo" required>
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" name="email" placeholder="tu@correo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Contraseña</label>
+            <input type="password" id="signupPassword" name="password" placeholder="••••••••" required minlength="6">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Contraseña</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="auth-btn" id="signupBtn">Registrarse</button>
+        </form>
+      </div>
+
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <span>Procesando...</span>
+      </div>
+
+      <div class="social-login">
+        <button class="social-btn google-btn" onclick="loginWithGoogle()">
+          🔍 Continuar con Google
+        </button>
+        <button class="social-btn facebook-btn" onclick="loginWithFacebook()">
+          📘 Continuar con Facebook
+        </button>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

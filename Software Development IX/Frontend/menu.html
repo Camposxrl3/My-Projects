@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú Principal – Chess Game</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <script src="./js/menu.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="welcome">♜ Hashing Chess ♜ - Menú</div>
+      <div class="user-info">
+        <div class="user-avatar">👤</div>
+        <div class="user-stats">
+          <div class="username" id="username"></div>
+          <div class="coins" id="userCoins"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+      <!-- Jugar contra bots -->
+      <div class="menu-card" id="botCard">
+        <div class="menu-icon">🤖</div>
+        <div class="menu-title">Jugar contra bots</div>
+        <div class="menu-description">
+          Entrena y gana monedas jugando contra diferentes niveles de IA
+        </div>
+      </div>
+
+      <!-- Jugar contra amigo -->
+      <div class="menu-card" id="friendCard">
+        <div class="menu-icon">🤝</div>
+        <div class="menu-title">Juega contra un amigo</div>
+        <div class="menu-description">
+          Invita a un amigo a jugar al ajedrez en tiempo real
+        </div>
+      </div>
+
+      <!-- Tienda de monedas -->
+      <div class="menu-card" id="buyCard">
+        <div class="menu-icon">🪙</div>
+        <div class="menu-title">Comprar monedas</div>
+        <div class="menu-description">
+          Adquiere más monedas para desbloquear funciones premium y apostar
+        </div>
+      </div>
+
+      <!-- Retirar dinero -->
+      <div class="menu-card" id="withdrawCard">
+        <div class="menu-icon">💵</div>
+        <div class="menu-title">Retirar dinero</div>
+        <div class="menu-description">
+          Convierte tus monedas virtuales en dinero real
+        </div>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <button class="action-btn buy-coins-btn">
+        💰 Comprar Monedas
+      </button>
+      <button class="action-btn withdraw-btn">
+        💵 Retirar Dinero
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>

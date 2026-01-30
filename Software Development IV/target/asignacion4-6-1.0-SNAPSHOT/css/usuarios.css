@@ -1,0 +1,51 @@
+
+
+.user-list {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.user {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-details {
+    flex: 1;
+}
+
+.user-name {
+    font-size: 18px;
+}
+
+.user-date {
+    color: #888;
+}
+
+.user-loan {
+    flex: 1;
+    text-align: right;
+}
+
+.loan-number {
+    font-size: 16px;
+}
+
+.read-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estiliza los checkbox según tu preferencia */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
