@@ -1,4 +1,4 @@
-# My Web Project (Vite + React)
+# Client Web Project (Vite + React)
 
 This is a website with 3 sections: **Us, Services and Contact**.
 
