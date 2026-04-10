@@ -6,6 +6,8 @@ import 'package:just_audio/just_audio.dart';
 final OnAudioQuery audioQuery = OnAudioQuery();
 
 // Classes
+
+// Singleton Audio Player Manager
 class AudioPlayerManager {
   static final AudioPlayerManager _instance = AudioPlayerManager._internal();
   factory AudioPlayerManager() => _instance;
@@ -48,6 +50,14 @@ class AudioPlayerManager {
   Stream<Duration?> get durationStream => player.durationStream;
 }
 
+// Artist with up to 4 album IDs for the 2×2 grid
+class ArtistWithAlbums {
+  final ArtistModel artist;
+  final List<int> albumIds; // up to 4, used for the 2×2 grid
+
+  const ArtistWithAlbums({required this.artist, required this.albumIds});
+}
+
 // Ask for permissions and load songs
 Future<List<SongModel>> loadSongs() async {
   var status = await Permission.audio.request();
@@ -82,6 +92,7 @@ Future<List<AlbumModel>> loadAlbums() async {
   return [];
 }
 
+// Ask permissions and load songs from an album
 Future<List<SongModel>> loadAlbumtracks(int albumId) async {
   var status = await Permission.audio.request();
 
@@ -108,6 +119,37 @@ Future<List<SongModel>> loadAlbumtracks(int albumId) async {
     return albumTracks;
   }
   return [];
+}
+
+Future<List<ArtistWithAlbums>> loadArtists() async {
+  final OnAudioQuery audioQuery = OnAudioQuery();
+
+  final artists = await audioQuery.queryArtists(
+    sortType: ArtistSortType.ARTIST,
+    orderType: OrderType.ASC_OR_SMALLER,
+    uriType: UriType.EXTERNAL,
+  );
+
+  final albums = await audioQuery.queryAlbums(
+    sortType: AlbumSortType.ARTIST, // groups albums by artist
+    orderType: OrderType.ASC_OR_SMALLER,
+    uriType: UriType.EXTERNAL,
+  );
+
+  // Build a map: artistName → list of album IDs
+  final Map<String, List<int>> albumsByArtist = {};
+  for (final album in albums) {
+    final key = album.artist ?? 'Unknown Artist';
+    albumsByArtist.putIfAbsent(key, () => []).add(album.id);
+  }
+
+  return artists.map((artist) {
+    final ids = albumsByArtist[artist.artist] ?? [];
+    return ArtistWithAlbums(
+      artist: artist,
+      albumIds: ids.take(4).toList(), // max 4 for the 2×2 grid
+    );
+  }).toList();
 }
 
 // Format duration from milliseconds to mm:ss

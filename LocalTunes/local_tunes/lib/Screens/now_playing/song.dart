@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:local_tunes/Methods/methods.dart';
+import 'package:local_tunes/Screens/widgets.dart';
 import 'package:local_tunes/Theme/theme.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
@@ -65,11 +66,9 @@ class SongPageState extends State<SongPage> {
                   ),
 
                   // Song title
-                  Text(
-                    song.title,
+                  MarqueeText(
+                    text: song.title,
                     style: textStyles[0].copyWith(color: mainColors[1]),
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.center,
                   ),
 
                   const SizedBox(height: 10),
@@ -79,10 +78,9 @@ class SongPageState extends State<SongPage> {
                   const SizedBox(height: 10),
 
                   // Album name
-                  Text(
-                    song.album ?? "Unknown Album",
+                  MarqueeText(
+                    text: song.album ?? "Unknown Album",
                     style: textStyles[1],
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               );

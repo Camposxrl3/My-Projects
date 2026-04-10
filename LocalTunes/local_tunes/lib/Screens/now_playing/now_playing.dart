@@ -26,8 +26,10 @@ class _NowPlayingPageState extends State<NowPlayingPage> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // tap buttons to switch between song details and queue
             Row(
               children: [
+                // Song Details Button
                 Expanded(
                   child: TextButton(
                     onPressed: () {
@@ -58,6 +60,7 @@ class _NowPlayingPageState extends State<NowPlayingPage> {
                   ),
                 ),
 
+                // Queue Button
                 Expanded(
                   child: TextButton(
                     onPressed: () {

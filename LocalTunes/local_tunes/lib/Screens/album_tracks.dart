@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:local_tunes/Methods/methods.dart';
 import 'package:local_tunes/Screens/mini_player.dart';
+import 'package:local_tunes/Screens/widgets.dart';
 import 'package:local_tunes/Theme/theme.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
@@ -15,7 +16,7 @@ class AlbumTracksPage extends StatefulWidget {
 
 class AlbumsTracksPageState extends State<AlbumTracksPage> {
   final AudioPlayerManager playerManager = AudioPlayerManager();
-  final String title = "LocalTunes";
+  String title = "Album";
   List<SongModel> songs = [];
   bool isLodading = true;
 
@@ -70,10 +71,8 @@ class AlbumsTracksPageState extends State<AlbumTracksPage> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  songs.first.album ?? "Unknown Album",
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
+                                MarqueeText(
+                                  text: songs.first.album ?? "Unknown Album",
                                   style: textStyles[4],
                                 ),
                                 SizedBox(height: 20),
@@ -134,7 +133,7 @@ class AlbumsTracksPageState extends State<AlbumTracksPage> {
 
                               // Song Name + Artist Name
                               title: Text(
-                                song.title,
+                                "${index + 1}. ${song.title}",
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: textStyles[1],
